@@ -112,6 +112,15 @@ img {
     cursor: pointer;
     background-color: var(--buttons-active-color);
 }
+.button:active {
+    transform: translateY(1px);
+}
+.button:focus {
+    outline: none;
+}
+.button:focus-visible {
+    outline: 2px solid black;
+}
 .button.--header {
     color: var(--buttons-color);
     background-color: var(--secondary-color);
@@ -129,6 +138,9 @@ img {
     border-radius: 5px;
     flex-basis: 30%;
     padding: 0.7em 0;
+}
+.button.--form:focus-visible {
+    outline: 2px solid white;
 }
 
 /* Intro */
@@ -192,6 +204,12 @@ img {
 /* Background */
 .background.--desktop {
     display: none;
+}
+.background.--top {
+    margin-bottom: -5px;
+}
+.background.--bottom {
+    margin-top: -5px;
 }
 @media screen and (min-width: 600px) {
     .background.--mobile {
